@@ -10,7 +10,9 @@ Clone this repo using git `git clone https://github.com/Windium/ShareX-Custom-UR
 ### Cloudflare Worker
 Create worker account and worker. [guide](https://developers.cloudflare.com/workers/quickstart)
 
-Open `worker-script` on any text exitor change `cdnDomain` to custom uploader url and `domain` to your domain.
+Open `worker-script.js` on any text exitor, change `cdnDomain` to custom uploader url and `domain` to your domain.
+
+Copy script then on Cloudflare Workers page > Quick edit > Paste the content of `worker-script.js` > Done
 
 ### ShareX Config
   - Open ShareX > Destinations > Custom uploader settings > Import > From file > Select `custom-domain.sxcu` file > Open
@@ -18,3 +20,5 @@ Open `worker-script` on any text exitor change `cdnDomain` to custom uploader ur
   - Go back to ShareX menu > Destinations > URL Shortener > Select Custom URL Shortener
   - After capture tasks must be selected as `Upload image to host`.
   - After upload tasks select `Shorten URL` and `Copy URL to clipboard`.
+
+##### Windium (https://windium.xyz)
