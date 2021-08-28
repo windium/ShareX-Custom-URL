@@ -3,6 +3,9 @@
   "DestinationType": "URLShortener",
   "RequestMethod": "POST",
   "RequestURL": "https://cdn.example.com",
+  "Headers": {
+    "key": "supersecretkey"
+  },
   "Body": "JSON",
   "Data": "{\"url\":\"$input$\"}",
   "URL": "$response$"
