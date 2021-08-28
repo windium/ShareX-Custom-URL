@@ -3,7 +3,7 @@ addEventListener('fetch', event => {
 })
 let cdnDomain = "example-sharex-uploader.com"
 let domain = "cdn.example.com"
-let secret = "secretkey"
+let secret = "supersecretkey"
 async function runScript(event) {
     let response;
     if(event.request.method == 'POST') {
