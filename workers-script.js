@@ -3,12 +3,23 @@ addEventListener('fetch', event => {
 })
 let cdnDomain = "example-sharex-uploader.com"
 let domain = "cdn.example.com"
+let secret = "supersecretkey"
 async function runScript(event) {
     let response;
     if(event.request.method == 'POST') {
         let json = await event.request.json();
-        response = json.url.replace(cdnDomain, domain)
-        return new Response(response)
+        if(json.key !== secret) {
+          return new Response(
+                JSON.stringify({
+                    error: "401: Unauthorized"
+                }), {
+                    status: 401
+                }
+            )
+        } else {
+            response = json.url.replace(cdnDomain, domain)
+            return new Response(response)
+        }
     } else {
         let regex = /[a-zA-Z0-9]+\.(png|jpe?g|gifv?)/
         let status;
