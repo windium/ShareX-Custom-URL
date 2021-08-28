@@ -4,7 +4,7 @@
   "RequestMethod": "POST",
   "RequestURL": "https://cdn.example.com",
   "Headers": {
-    "key": "supersecretkey"
+    "key": "secretkey"
   },
   "Body": "JSON",
   "Data": "{\"url\":\"$input$\"}",
